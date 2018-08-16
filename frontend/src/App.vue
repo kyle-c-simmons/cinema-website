@@ -42,16 +42,20 @@
        </div>
      </div>
    </nav>
-    <router-view></router-view>
+   <router-view></router-view>
+   <component><Footer></Footer></component>
   </div>
 </template>
 
 
 <script>
 import Header from './components/Header'
+import Footer from './components/Footer'
+
 import HomePage from './components/Pages/HomePage'
 
 export default {
+  components: { Footer}
 }
 </script>
 
