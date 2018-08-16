@@ -1,119 +1,149 @@
 <template>
-  <footer class="mt-5">
-  <div class="container-fluid bg-faded mt-5">
-    <div class="container">
-      <div class="row py-3">
-        <!-- footer column 1 start -->
-        <div class="col-md-4">
-          <!-- row start -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-info" href="https://twitter.com/ ">
-                <i class="fa fa-2x fa-fw fa-twitter" aria-hidden="true "></i>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue-grey lighten-5">
+
+      <div style="background-color: #ffffff;">
+        <div class="container">
+
+          <!-- Grid row-->
+          <div class="row py-4 d-flex align-items-center">
+
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                  <a class="navbar-brand"><router-link v-bind:to="'/home'"><img src="../../src/images/logo.jpg"><span>Cinemas</span></router-link></a>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div style="padding-right: 60px;" class="col-md-6 col-lg-7 text-center text-md-right">
+
+              <!-- Facebook -->
+              <a class="fb-ic">
+                <i class="fa fa-facebook white-text mr-4"> </i>
               </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Tweets</h4>
-              Embed here?
-            </div>
-          </div>
-          <!-- row end -->
-        </div>
-        <!-- footer column 1 end -->
-        <!-- footer column 2 start -->
-        <div class="col-md-4">
-          <!-- row start -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-info" href="#">
-                <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+              <!-- Twitter -->
+              <a class="tw-ic">
+                <i class="fa fa-twitter white-text mr-4"> </i>
               </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Contact us</h4>
-              <p>Why not?</p>
-            </div>
-          </div>
-          <!-- row end -->
-          <!-- row start -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-info" href="#">
-                <i class="fa fa-2x fa-fw fa-laptop" aria-hidden="true "></i>
+              <!-- Google +-->
+              <a class="gplus-ic">
+                <i class="fa fa-google-plus white-text mr-4"> </i>
               </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Cookie policy</h4>
-              <p class=" ">We use <a class=" " href="/# ">cookies </a></p>
-            </div>
-          </div>
-          <!-- row end -->
-        </div>
-        <!-- footer column 2 end -->
-        <!-- footer column 3 start -->
-        <div class="col-md-4">
-          <!-- row starting  -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-danger" href="# ">
-                <i class="fa fa-2x fa-fw fa-file-pdf-o" aria-hidden="true "></i>
+              <!--Linkedin -->
+              <a class="li-ic">
+                <i class="fa fa-linkedin white-text mr-4"> </i>
               </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Download pdf</h4>
-              <p> You like print?</a></p>
+              <!--Instagram-->
+              <a class="ins-ic">
+                <i class="fa fa-instagram white-text"> </i>
+              </a>
 
             </div>
+            <!-- Grid column -->
+
           </div>
-          <!-- row ended -->
-          <!-- row starting  -->
-          <div class="row py-2">
-            <div class="col-sm-3 hidden-md-down">
-              <a class="bg-circle bg-info" href="https://twitter.com/ ">
-                <i class="fa fa-2x fa-fw fa-info" aria-hidden="true "></i>
-              </a>
-            </div>
-            <div class="col-sm-9">
-              <h4>Info</h4>
-              About us.
-            </div>
-          </div>
-          <!-- row ended -->
-        </div>
-        <!-- footer column 3 end -->
-      </div>
-    </div>
-  </div>
+          <!-- Grid row-->
 
-
-  <div class="container-fluid bg-primary py-3">
-    <div class="container">
-      <div class="row py-3">
-        <div class="col-md-9">
-          <p class="text-white">Lorem ipsum.</p>
-        </div>
-        <div class="col-md-3">
-          <div class="d-inline-block">
-            <div class="bg-circle-outline d-inline-block">
-              <a href="https://www.facebook.com/" class="text-white"><i class="fa fa-2x fa-fw fa-facebook"></i>
-		</a>
-            </div>
-
-            <div class="bg-circle-outline d-inline-block">
-              <a href="https://twitter.com/" class="text-white">
-                <i class="fa fa-2x fa-fw fa-twitter"></i></a>
-            </div>
-
-            <div class="bg-circle-outline d-inline-block">
-              <a href="https://www.linkedin.com/company/" class="text-white">
-                <i class="fa fa-2x fa-fw fa-linkedin"></i></a>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+
+      <!-- Footer Links -->
+      <div style=""class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3 dark-grey-text">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+            <!-- Content -->
+            <h6 class="text-uppercase font-weight-bold">QA Cinemas</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>Welcome to QA Cinemas. We are the number ONE cinemas.</p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Support</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <a class="dark-grey-text" href="#!">About Us</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Contact Us</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Support</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">FAQ's</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Terms and Conditions</a>
+            </p>
+
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Account</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <a class="dark-grey-text" href="#!">Login</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Sign up</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!"></a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="#!">Help</a>
+            </p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div  class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+            <p>
+              <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p>
+              <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div style="color: #fff" class="footer-copyright text-center  py-3">© 2018 Copyright:
+        <a style="color: #67ff8b !important" href="https://mdbootstrap.com/bootstrap-tutorial/"> qa-cinemas.com</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 </template>
 
 <script>
@@ -121,41 +151,23 @@
   }
 </script>
 
-<style>
-.bg-primary {
- background-color: #000 !important;
-}
-.bg-circle
-{
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  padding: 14px 4px;
-  color: #ececec;
-  text-align: center;
-  border-radius: 50%;
-}
-.bg-circle-outline
-{
-  width: 50px;
-  height: 50px;
-  color:smoke;
-  padding: 8px 2px;
-  border: 2px solid;
-  border-color: smoke;
-  border-radius: 50%;
-}
-.bg-circle a, a:hover, .media a:focus
-{
-  text-decoration: none !important;
-  outline: none;
-  color: #ececec;
-}
-.bg-circle-outline a, a:hover, .media a:focus
-{
-  text-decoration: none !important;
-  outline: none;
-  color: #ececec;
-}
+<style lang="scss">
+  footer {
+    background: #03396c !important;
+    a {
+      color: #000 !important;
+    }
+    p {
+      color: #ffffff !important;
+
+    }
+    h6 {
+      color: #67ff8b;
+    }
+  }
+  .dark-grey-text {
+    color: #ffffff !important;
+  }
+
 
 </style>

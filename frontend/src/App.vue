@@ -84,6 +84,7 @@ p {
 
 .navbar {
   background-color: #ffffff !important;
+  margin-bottom: -0px !important;
 }
 
 .navbar-nav li {
