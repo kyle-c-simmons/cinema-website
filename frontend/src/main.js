@@ -15,13 +15,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import HomePage from 'components/Pages/HomePage'
-import WhatsOnPage from 'components/Pages/WhatsOnPage'
+import CinemasPage from 'components/Pages/CinemasPage'
 
 
 // ================ All paths =====================
 const routes = [
   { path: '/home', component: HomePage },
-  { path: '/whats-on', component: WhatsOnPage }
+  { path: '/cinemas', component: CinemasPage }
 
 
 ];
