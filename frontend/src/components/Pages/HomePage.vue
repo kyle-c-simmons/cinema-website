@@ -33,7 +33,66 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+
+<div class="jumbotron">
+    <h2>Top 6 Movies</h2><br><br>
+      <div class="row">
+
+    <div class="col-md-12">
+
+        <div id="mdb-lightbox-ui"></div>
+
+        <div id="top-6-movies" class="mdb-lightbox no-margin">
+
+            <figure class="col-md-4">
+                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg" class="img-fluid">
+                    <h3 class="text-center my-3">Photo title</h3>
+                </a>
+            </figure>
+
+            <figure class="col-md-4">
+                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(96).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(96).jpg" class="img-fluid" />
+                    <h3 class="text-center my-3">Photo title</h3>
+                </a>
+            </figure>
+
+            <figure class="col-md-4">
+                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(104).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(104).jpg" class="img-fluid" />
+                    <h3 class="text-center my-3">Photo title</h3>
+                </a>
+            </figure>
+
+            <figure class="col-md-4">
+                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(45).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(45).jpg" class="img-fluid" />
+                    <h3 class="text-center my-3">Photo title</h3>
+                </a>
+            </figure>
+
+            <figure class="col-md-4">
+                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(122).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg" class="img-fluid" />
+                    <h3 class="text-center my-3">Photo title</h3>
+                </a>
+            </figure>
+
+            <figure class="col-md-4">
+                <a class="black-text" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
+                    <h3 class="text-center my-3">Photo title</h3>
+                </a>
+            </figure>
+        </div>
+        <button id="movies-button" type="button" class="btn btn-primary">More Movies</button>
     </div>
+
+</div>
+</div>
+</div>
+
 
 </template>
 
@@ -67,5 +126,9 @@
 }
 .carousel-fade .carousel-control {
   z-index: 2;
+}
+
+#movies-button {
+  margin-top: 40px !important;
 }
 </style>
