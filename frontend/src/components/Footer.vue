@@ -138,7 +138,7 @@
 
       <!-- Copyright -->
       <div style="color: #fff" class="footer-copyright text-center  py-3">© 2018 Copyright:
-        <a style="color: #67ff8b !important" href="https://mdbootstrap.com/bootstrap-tutorial/"> qa-cinemas.com</a>
+        <a style="color: #67ff8b !important" href="https://api.themoviedb.org/3/movie/550?api_key=8813ca16ebe669fec2836395a2928dbc"> qa-cinemas.com</a>
       </div>
       <!-- Copyright -->
 

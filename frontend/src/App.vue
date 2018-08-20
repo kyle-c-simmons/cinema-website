@@ -10,10 +10,10 @@
        <div class="collapse navbar-collapse" id="navbarResponsive">
          <ul style="float: right;" class="navbar-nav ml-auto">
            <li class="nav-item">
-             <a class="nav-link" href="#"><router-link v-bind:to="'/home'"><span class="glyphicon glyphicon-home"></span></router-link></a>
+             <a class="nav-link"><router-link v-bind:to="'/home'"><span class="glyphicon glyphicon-home"></span></router-link></a>
            </li>
            <li class="nav-item">
-             <a bgcolor="blue"class="nav-link" href="#"><router-link v-bind:to="'/cinemas'">Cinemas</router-link></a>
+             <a bgcolor="blue"class="nav-link"><router-link v-bind:to="'/cinemas'">Cinemas</router-link></a>
            </li>
            <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
