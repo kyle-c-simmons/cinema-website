@@ -15,13 +15,13 @@
 
         <!-- Wrapper for slides -->
         <div id="home-sldier" class="carousel-inner">
-          <div class="item active" v-for="movie, index in popularMovies" :key="movie.id" v-if="index >= 0 && index < 1">
+          <div class="item active" v-for="movie, index in popularMovies" :key="movie.id">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image sldier">
             <h3>Los Angeles</h3>
         <p>LA is always so much fun!</p>
           </div>
 
-          <div class="item" v-for="movie, index in popularMovies" :key="movie.id" v-if="index > 0 && index < 7">
+          <div class="item" v-for="movie, index in popularMovies" :key="movie.id">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image slider">
           </div>
 
