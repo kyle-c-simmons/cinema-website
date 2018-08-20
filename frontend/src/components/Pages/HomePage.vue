@@ -1,6 +1,6 @@
 <template>
     <div >
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -39,7 +39,7 @@
       </div>
 
   <div class="jumbotron">
-    <h1 class="display-3">Most Popular Movies</h1><br><br><br><br>
+    <h1 class="display-3">Most Popular Movies</h1><br><br>
         <div class="row">
 
       <div class="col-md-12">
@@ -48,12 +48,17 @@
 
           <div id="top-6-movies" class="mdb-lightbox no-margin">
 
-              <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id"">
-                  <a class="black-text" :href="'http://image.tmdb.org/t/p/w342' + movie.poster_path" data-size="342x513">
-                      <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
-                      </a>
-                      <h6 style="font-size: 14px" class="display-4">{{movie.title}}</h6>
-                      <h6 style="font-size: 14px" class="bold padding-bottom-7 display-4">{{movie.vote_average}}<small> / 10</small></h6>
+              <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7"">
+                <router-link
+                  :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
+                  <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
+                  <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
+
+                    </router-link>
+
+
+                      <h6 style="font-size: 18px" class="display-4">{{movie.title}}</h6>
+                      <h6 style="font-size: 14px" class="bold padding-bottom-7 display-4"><b>{{movie.vote_average}}</b><small> / 10</small></h6>
 
               </figure>
 
@@ -136,5 +141,32 @@
   }
 #eachMovieHomePage img:hover {
   opacity: 0.6;
+}
+
+.jumbotron {
+  background-image: url("../../../src/images/jumb-bg.png");
+}
+
+#book-movies-btn {
+  position: absolute;
+  width: 100px;
+  left:35%;
+  top: 200px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+#book-movies-btn a {
+  width: 500px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+img:hover + #book-movies-btn, #book-movies-btn:hover {
+     opacity: 1;
 }
 </style>
