@@ -48,7 +48,7 @@
 
           <div id="top-6-movies" class="mdb-lightbox no-margin">
 
-              <figure id="eachMovieHomePage" class="col-md-3" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7">
+              <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id"">
                   <a class="black-text" :href="'http://image.tmdb.org/t/p/w342' + movie.poster_path" data-size="342x513">
                       <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
                       </a>
@@ -81,7 +81,7 @@
       .then(res => {
         console.log(res)
         this.popularMovies = res.data.results;
-        console.log(this.accounts)
+        console.log(this.popularMovies)
       })
       .catch(error => console.log(error))
     }
@@ -134,5 +134,7 @@
   #eachMovieHomePage {
     margin: 30px 0px;
   }
-
+#eachMovieHomePage img:hover {
+  opacity: 0.6;
+}
 </style>

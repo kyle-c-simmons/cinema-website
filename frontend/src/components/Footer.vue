@@ -151,19 +151,19 @@
   }
 </script>
 
-<style lang="scss">
+<style>
   footer {
     background: #03396c !important;
-    a {
-      color: #000 !important;
-    }
-    p {
-      color: #ffffff !important;
+  }
 
-    }
-    h6 {
-      color: #67ff8b;
-    }
+  footer a {
+    color: #000 !important;
+  }
+  footer p {
+    color: #ffffff !important;
+  }
+  footer h6 {
+    color: #67ff8b;
   }
   .dark-grey-text {
     color: #ffffff !important;
