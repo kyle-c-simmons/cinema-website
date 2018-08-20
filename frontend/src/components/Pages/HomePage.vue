@@ -48,7 +48,7 @@
 
           <div id="top-6-movies" class="mdb-lightbox no-margin">
 
-              <figure id="eachMovieHomePage" class="col-md-3" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7 && index !=15 && index !=17">
+              <figure id="eachMovieHomePage" class="col-md-3" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7">
                   <a class="black-text" :href="'http://image.tmdb.org/t/p/w342' + movie.poster_path" data-size="342x513">
                       <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
                       </a>
