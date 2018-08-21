@@ -21,6 +21,7 @@ import NewReleases from './components/Pages/NewReleasesPage'
 import MovieList from './components/Pages/MovieListing'
 
 import MovieDetails from 'components/Pages/MovieDetails'
+import AboutUs from 'components/Pages/AboutUs'
 
 // ================ All paths =====================
 const routes = [
@@ -34,9 +35,8 @@ const routes = [
   ] },
   { path: '/cinemas', component: CinemasPage },
   {path: '/newrelease', component: NewReleases },
-  {path: '/movielist', component: MovieList }
-
-
+  {path: '/movielist', component: MovieList },
+  {path: '/aboutus', component: AboutUs}
 ];
 
 const router = new VueRouter({
