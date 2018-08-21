@@ -45,7 +45,6 @@
   </div>
 </template>
 
-
 <script>
 import Header from './components/Header'
 
@@ -107,7 +106,6 @@ p {
 #nav-toggle-button{
     background-color: #4d4d4d;
 }
-
 
 .navbar-brand {
   margin-bottom: 22px;
