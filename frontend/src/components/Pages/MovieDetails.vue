@@ -1,7 +1,7 @@
 <template>
   <div>
     <ol class="breadcrumb">
-      <li><a href="#">Home</a></li>
+      <li><router-link v-bind:to="'/home'">Home</router-link></li>
       <li class="active">{{ getMovieInformation.title }}</li>
     </ol>
 
@@ -15,10 +15,10 @@
         <h1 class="display-3">{{ getMovieInformation.title }}</h1><br><br>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">About this film</h3>
+            <h1 style="font-size: 28px;" class="panel-title display-3">About this film</h1>
           </div>
           <div class="panel-body">
-            <img style="float: left;" class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + getMovieInformation.poster_path">
+            <img style="float: left; margin-right: 20px" class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + getMovieInformation.poster_path">
             <p>{{ getMovieInformation.overview }}</p>
           </div>
         </div>
@@ -67,14 +67,20 @@
     }
 }
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+</style>
 
 <style scoped>
+
 
 .class video-player-box {
   width: 100% !important;
 }
 .outer-container{
-    width:100%
+    width:100%;
+    margin-top: -20px;
 }
 .video-container {
     position: relative;
@@ -92,7 +98,16 @@
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px !important;
   color: #000000;
+
+}
+
+.breadcrumb {
+  margin-top: -7px;
+  height: 50px;
+  padding-top: 20px;
 }
 
 </style>
