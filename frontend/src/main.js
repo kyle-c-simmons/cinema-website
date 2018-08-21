@@ -16,12 +16,14 @@ Vue.use(VueRouter)
 
 import HomePage from 'components/Pages/HomePage'
 import CinemasPage from 'components/Pages/CinemasPage'
+import Classifications from 'components/Pages/Classifications'
 
 import MovieDetails from 'components/Pages/MovieDetails'
 
 // ================ All paths =====================
 const routes = [
   { path: '/', component: HomePage },
+  { path: '/classifications', component: Classifications },
   { path: '/home', component: HomePage, children: [
     { path: '', component: HomePage},
   ] },
