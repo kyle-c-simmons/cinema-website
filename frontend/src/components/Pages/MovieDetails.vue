@@ -13,6 +13,7 @@
 
       <div class="jumbotron">
         <h1 class="display-3">{{ getMovieInformation.title }}</h1><br><br>
+
         <div class="panel panel-default">
           <div class="panel-heading">
             <h1 style="font-size: 28px;" class="panel-title display-3">About this film</h1>
@@ -20,6 +21,15 @@
           <div class="panel-body">
             <img style="float: left; margin-right: 20px" class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + getMovieInformation.poster_path">
             <p>{{ getMovieInformation.overview }}</p>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1 style="font-size: 28px;" class="panel-title display-3">Book this film</h1>
+          </div>
+          <div class="panel-body">
+            <p></p>
           </div>
         </div>
       </div>
