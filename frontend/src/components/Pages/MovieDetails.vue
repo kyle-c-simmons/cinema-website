@@ -1,20 +1,28 @@
 <template>
   <div>
-
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li class="active">{{ getMovieInformation.title }}</li>
+    </ol>
 
     <div class="outer-container">
-    <div class="video-container">
+      <div class="video-container">
             <iframe width="560" height="315" :src="'https://www.youtube.com/embed/' + this.youtubeMovieId + '?autoplay=1'" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
-
 
       <div class="jumbotron">
-      <p>User loaded has ID: {{ $route.params.id }}</p>
-
-
+        <h1 class="display-3">{{ getMovieInformation.title }}</h1><br><br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">About this film</h3>
+          </div>
+          <div class="panel-body">
+            <img style="float: left;" class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + getMovieInformation.poster_path">
+            <p>{{ getMovieInformation.overview }}</p>
+          </div>
+        </div>
       </div>
-
   </div>
 
 
@@ -33,20 +41,31 @@
     data() {
       return {
         getMovieId: this.$route.params.id,
-        youtubeMovieId: ''
+        youtubeMovieId: '',
+        getMovieInformation: ''
       }
     },
+    methods: {
+
+    },
     created() {
-      axios.get('https://api.themoviedb.org/3/movie/' + this.getMovieId + '/videos?api_key=8813ca16ebe669fec2836395a2928dbc&language=en-GB')
-      .then(res => {
-        console.log(res.data.results[0].key)
-        this.youtubeMovieId = res.data.results[0].key;
-      })
-      .catch(error => console.log(error))
+        axios.get('https://api.themoviedb.org/3/movie/' + this.getMovieId + '/videos?api_key=8813ca16ebe669fec2836395a2928dbc&language=en-GB')
+        .then(res => {
+          console.log(res.data.results[0].key)
+          this.youtubeMovieId = res.data.results[0].key;
+        })
+        .catch(error => console.log(error));
+
+        axios.get('https://api.themoviedb.org/3/movie/' + this.getMovieId + '?api_key=8813ca16ebe669fec2836395a2928dbc&language=en-GB')
+        .then(res => {
+          console.log(res.data)
+          this.getMovieInformation = res.data;
+        })
+        .catch(error => console.log(error));
+
 
     }
-  }
-
+}
 </script>
 
 <style scoped>
@@ -70,6 +89,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+p {
+  color: #000000;
 }
 
 </style>
