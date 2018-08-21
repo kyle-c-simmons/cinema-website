@@ -16,12 +16,14 @@ Vue.use(VueRouter)
 
 import HomePage from 'components/Pages/HomePage'
 import CinemasPage from 'components/Pages/CinemasPage'
+import Classifications from 'components/Pages/Classifications'
 
 
 // ================ All paths =====================
 const routes = [
   { path: '/home', component: HomePage },
-  { path: '/cinemas', component: CinemasPage }
+  { path: '/cinemas', component: CinemasPage },
+  { path: '/classifications', component: Classifications }
 
 
 ];
