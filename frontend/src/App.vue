@@ -21,7 +21,7 @@
              </a>
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                <a class="dropdown-item"><router-link v-bind:to="'/newrelease'">New releases</router-link></a>
-               <a class="dropdown-item" href="portfolio-2-col.html">Listings</a>
+               <a class="dropdown-item"><router-link v-bind:to="'/movielist'">Listings</router-link></a>
              </div>
            </li>
 

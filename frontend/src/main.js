@@ -18,6 +18,7 @@ import HomePage from 'components/Pages/HomePage'
 import CinemasPage from 'components/Pages/CinemasPage'
 import Classifications from 'components/Pages/Classifications'
 import NewReleases from './components/Pages/NewReleasesPage'
+import MovieList from './components/Pages/MovieListing'
 
 import MovieDetails from 'components/Pages/MovieDetails'
 
@@ -32,7 +33,8 @@ const routes = [
     {path: ':id', component: MovieDetails, name: 'movieDetailsId'}
   ] },
   { path: '/cinemas', component: CinemasPage },
-  {path: '/newrelease', component: NewReleases }
+  {path: '/newrelease', component: NewReleases },
+  {path: '/movielist', component: MovieList }
 
 
 ];
