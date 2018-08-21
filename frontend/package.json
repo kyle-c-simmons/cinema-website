@@ -23,6 +23,7 @@
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
     "vue-translate-plugin": "^1.1.11",
+    "vue-video-player": "^5.0.2",
     "vuex": "^2.0.0"
   },
   "devDependencies": {

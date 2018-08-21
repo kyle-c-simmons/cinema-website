@@ -18,12 +18,19 @@ import HomePage from 'components/Pages/HomePage'
 import CinemasPage from 'components/Pages/CinemasPage'
 import Classifications from 'components/Pages/Classifications'
 
+import MovieDetails from 'components/Pages/MovieDetails'
 
 // ================ All paths =====================
 const routes = [
-  { path: '/home', component: HomePage },
-  { path: '/cinemas', component: CinemasPage },
-  { path: '/classifications', component: Classifications }
+  { path: '/', component: HomePage },
+  { path: '/classifications', component: Classifications },
+  { path: '/home', component: HomePage, children: [
+    { path: '', component: HomePage},
+  ] },
+  { path: '/movie', component: MovieDetails, name: 'movieDetails', children: [
+    {path: ':id', component: MovieDetails, name: 'movieDetailsId'}
+  ] },
+  { path: '/cinemas', component: CinemasPage }
 
 
 ];
