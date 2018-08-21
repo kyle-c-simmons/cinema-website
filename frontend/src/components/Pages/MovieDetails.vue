@@ -23,9 +23,9 @@
             <p>{{ getMovieInformation.overview }}</p>
 
             <div id="social-media-movie">
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-twitter"></a>
-              <a href="#" class="fa fa-instagram"></a>
+              <a :href="'https://www.facebook.com/' + getSocialMedia.facebook_id" target="_blank" class="fa fa-facebook"></a>
+              <a :href="'https://www.twitter.com/' + getSocialMedia.twitter_id" target="_blank" class="fa fa-twitter"></a>
+              <a :href="'https://www.instagram.com/' + getSocialMedia.instagram_id" target="_blank" class="fa fa-instagram"></a>
             </div>
 
 
@@ -62,7 +62,7 @@
                   	       <div class="clearfix"></div>
                   	        <p>{{ review.content }}</p>
                   	        <p>
-                  	            <a class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
+                  	            <a style="padding 0px;" class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
                   	            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
                   	       </p>
                   	    </div>
@@ -94,7 +94,8 @@
         getMovieId: this.$route.params.id,
         youtubeMovieId: '',
         getMovieInformation: '',
-        getMovieReviews: ''
+        getMovieReviews: '',
+        getSocialMedia: ''
       }
     },
     methods: {
@@ -119,6 +120,13 @@
         .then(res => {
           console.log("Review data" + res.data.results)
           this.getMovieReviews = res.data.results;
+        })
+        .catch(error => console.log(error));
+
+        axios.get('https://api.themoviedb.org/3/movie/' + this.getMovieId + '/external_ids?api_key=8813ca16ebe669fec2836395a2928dbc')
+        .then(res => {
+          console.log("Social media links: " + res.data)
+          this.getSocialMedia = res.data;
         })
         .catch(error => console.log(error));
 
@@ -170,11 +178,11 @@ p {
 }
 
 #social-media-movie {
-  float: right;
-  bottom: 0px; 
+  float: left;
+  bottom: 0px;
 }
 
-.fa {
+#social-media-movie .fa {
     padding: 20px;
     font-size: 30px;
     width: 80px;
@@ -184,22 +192,27 @@ p {
 }
 
 /* Add a hover effect if you want */
-.fa:hover {
+#social-media-movie .fa:hover {
     opacity: 0.7;
 }
 
 /* Set a specific color for each brand */
 
 /* Facebook */
-.fa-facebook {
+#social-media-movie .fa-facebook {
     background: #3B5998;
     color: white;
 }
 
 /* Twitter */
-.fa-twitter {
+#social-media-movie .fa-twitter {
     background: #55ACEE;
     color: white;
+}
+
+#social-media-movie .fa-instagram {
+  background: #007bb5;
+  color: white;
 }
 
 
