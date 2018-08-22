@@ -54,7 +54,50 @@
                 </tr>
                 <tr>
                   <th scope="row">Screen2</th>
-                  <td><button type="button" class="btn btn-primary">16:40 </button></td>
+
+
+                      <!-- Modal button -->
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">16:40 </button></td>
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="R4LHNM7VWYWCN">
+      <table>
+    <tr><td><input type="hidden" name="on0" value="Payment selection">Payment selection</td></tr><tr><td><select name="os0">
+  	     <option value="Child">Child £0.10 GBP</option>
+  	   <option value="Adult">Adult £0.20 GBP</option>
+        </select> </td></tr>
+      <tr><td><input type="hidden" name="on1" value="Quantity">Quantity</td></tr><tr><td><select name="os1">
+  	     <option value="1">1 </option>
+  	     <option value="2">2 </option>
+  	     <option value="3">3 </option>
+  	     <option value="4">4 </option>
+  	     <option value="5">5 </option>
+          </select> </td></tr>
+          </table>
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+                                <!-- END OF MODAL BUTTON -->
+
                 </tr>
               </tbody>
           </table>
