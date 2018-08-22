@@ -13,7 +13,6 @@
 
       <div class="jumbotron">
         <h1 class="display-3">{{ getMovieInformation.title }}</h1><br><br>
-
         <div class="panel panel-default">
           <div class="panel-heading">
             <h1 style="font-size: 28px;" class="panel-title display-3">About this film</h1>
@@ -38,7 +37,28 @@
             <h1 style="font-size: 28px;" class="panel-title display-3">Book this film</h1>
           </div>
           <div class="panel-body">
-            <p></p>
+            <DraggableCal />
+            <br>
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                 <th scope="col">Screen Name</th>
+                 <th scope="col">Times</th>
+
+               </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Screen 1</th>
+                  <td><button type="button" class="btn btn-primary">14:30</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">Screen2</th>
+                  <td><button type="button" class="btn btn-primary">16:40 </button></td>
+                </tr>
+              </tbody>
+          </table>
+
           </div>
         </div>
 
@@ -81,13 +101,15 @@
 
 
 <script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-draggable-call"></script>
+<script>
   import axios from 'axios';
-  import 'video.js/dist/video-js.css'
-  import { videoPlayer } from 'vue-video-player'
+  import DraggableCal from 'vue-draggable-cal';
 
   export default {
     components: {
-      videoPlayer
+      DraggableCal
     },
     data() {
       return {
