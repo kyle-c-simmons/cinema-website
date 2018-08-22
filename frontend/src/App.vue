@@ -20,8 +20,8 @@
                What's on
              </a>
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-               <a class="dropdown-item" href="portfolio-1-col.html"><router-link v-bind:to="'/newrelease'">New releases</router-link></a>
-               <a class="dropdown-item" href="portfolio-2-col.html">Listings</a>
+               <a class="dropdown-item"><router-link v-bind:to="'/newrelease'">New releases</router-link></a>
+               <a class="dropdown-item"><router-link v-bind:to="'/movielist'">Listings</router-link></a>
              </div>
            </li>
 
@@ -45,7 +45,6 @@
    <component><Footer></Footer></component>
   </div>
 </template>
-
 
 <script>
 import Header from './components/Header'
@@ -108,7 +107,6 @@ p {
 #nav-toggle-button{
     background-color: #4d4d4d;
 }
-
 
 .navbar-brand {
   margin-bottom: 22px;

@@ -48,7 +48,7 @@
 
           <div id="top-6-movies" class="mdb-lightbox no-margin">
 
-              <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7"">
+              <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id"">
                 <router-link
                   :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
                   <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
@@ -143,10 +143,6 @@
   opacity: 0.6;
 }
 
-.jumbotron {
-  background-image: url("../../../src/images/jumb-bg.png");
-}
-
 #book-movies-btn {
   position: absolute;
   width: 100px;
@@ -168,5 +164,12 @@
 
 img:hover + #book-movies-btn, #book-movies-btn:hover {
      opacity: 1;
+}
+</style>
+
+<style scoped>
+
+.jumbotron {
+  background-image: url("../../../src/images/jumb-bg.png");
 }
 </style>

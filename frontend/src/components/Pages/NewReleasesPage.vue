@@ -1,95 +1,60 @@
 <template>
-    <div class="container">
-      <h2>Carousel Example</h2>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+  <div>
+    <div class="jumbotron">
+      <h1 class="display-3">In Cinemas</h1><br><br>
+          <div class="row">
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="caption center-block">Test</div>
-            <img src="/static/Mamamoo.full.166902.jpg" class="figure-img img-fluid rounded" alt="Los Angeles">
+        <div class="col-md-12">
+
+            <div id="mdb-lightbox-ui"></div>
+
+            <div id="top-6-movies" class="mdb-lightbox no-margin">
+
+                <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7"">
+                  <router-link
+                    :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
+                    <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
+                    <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
+
+                      </router-link>
 
 
-          </div>
-          <div class="col-lg-3">
-            <img src="/static/mamamoo61.jpg"  class="img-rounded" alt="Chicago">
-          </div>
-          <div class="col-lg-3">
-            <img src="/static/mamamoo61.jpg"  class="img-rounded" alt="Chicago">
-          </div>
-          <div class="col-lg-3">
-            <img src="/static/Mamamoo.full.166902.jpg"  class="img-rounded" alt="New york">
-          </div>
+                        <h6 style="font-size: 15px" class="display-4">{{movie.title}}</h6>
+                        <h6 style="font-size: 14px" class="bold padding-bottom-7 display-4"><b>{{movie.vote_average}}</b><small> / 10</small></h6>
+
+                </figure>
+
+
+            </div>
         </div>
-          </div>
-
-          <div class="item">
-            <div class="row">
-            <div class="col-lg-3">
-            <img src="/static/Mamamoo.full.166902.jpg"  class="img-rounded" alt="Los Angeles">
-          </div>
-        <div class="col-lg-3">
-            <img src="/static/mamamoo61.jpg"  class="img-rounded" alt="Chicago">
-          </div>
-        <div class="col-lg-3">
-            <img src="/static/Mamamoo.full.166902.jpg"  class="img-rounded" alt="New york">
-          </div>
-        <div class="col-lg-3">
-            <img src="/static/mamamoo61.jpg"  class="img-rounded" alt="Chicago">
-          </div>
-        </div>
-          </div>
-
-          <div class="item">
-            <div class="row">
-            <div class="col-lg-3">
-              <img src="/static/mamamoo61.jpg"  class="img-rounded" alt="Chicago">
-          </div>
-          <div class="col-lg-3">
-
-            <img src="/static/Mamamoo.full.166902.jpg"  class="img-rounded" alt="Los Angeles">
-          </div>
-          <div class="col-lg-3">
-            <img src="/static/Mamamoo.full.166902.jpg"  class="img-rounded" alt="New york">
-          </div>
-          <div class="col-lg-3">
-            <img src="/static/mamamoo61.jpg"  class="img-rounded" alt="Chicago">
-          </div>
-          </div>
-          </div>
-      </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
-          <br>
-          <br>
       </div>
     </div>
-
-
+  </div>
+</div>
 
 </template>
 
 <script>
+import axios from 'axios';
+export default {
+  data() {
+    return {
+      popularMovies: ['']
+    }
+  },
+  created() {
+    axios.get('https://api.themoviedb.org/3/discover/movie?api_key=8813ca16ebe669fec2836395a2928dbc&language=en-GB&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=2018')
+    .then(res => {
+      console.log(res)
+      this.popularMovies = res.data.results;
+      console.log(this.popularMovies)
+    })
+    .catch(error => console.log(error))
+  }
+}
 </script>
 
-<style>
+<style scoped>
 .carousel-inner {
   width:40;
   height:300px;

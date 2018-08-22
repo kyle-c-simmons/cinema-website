@@ -18,7 +18,8 @@ import HomePage from 'components/Pages/HomePage'
 import CinemasPage from 'components/Pages/CinemasPage'
 import Classifications from 'components/Pages/Classifications'
 import PlacesToGo from 'components/Pages/PlacesToGo'
-
+import NewReleases from './components/Pages/NewReleasesPage'
+import MovieList from './components/Pages/MovieListing'
 import MovieDetails from 'components/Pages/MovieDetails'
 
 // ================ All paths =====================
@@ -32,9 +33,9 @@ const routes = [
     {path: ':id', component: MovieDetails, name: 'movieDetailsId'}
   ] },
   { path: '/cinemas', component: CinemasPage },
-  { path: '/places-to-go', component: PlacesToGo }
-
-
+  { path: '/places-to-go', component: PlacesToGo },
+  { path: '/newrelease', component: NewReleases },
+  { path: '/movielist', component: MovieList }
 ];
 
 const router = new VueRouter({
