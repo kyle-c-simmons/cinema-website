@@ -21,6 +21,7 @@ import PlacesToGo from 'components/Pages/PlacesToGo'
 import NewReleases from './components/Pages/NewReleasesPage'
 import MovieList from './components/Pages/MovieListing'
 import MovieDetails from 'components/Pages/MovieDetails'
+import TermsAndCondition from 'components/Pages/Terms&Condition'
 
 // ================ All paths =====================
 const routes = [
@@ -35,7 +36,8 @@ const routes = [
   { path: '/cinemas', component: CinemasPage },
   { path: '/places-to-go', component: PlacesToGo },
   { path: '/newrelease', component: NewReleases },
-  { path: '/movielist', component: MovieList }
+  { path: '/movielist', component: MovieList },
+  { path: '/termsAndcondition', component: TermsAndCondition }
 ];
 
 const router = new VueRouter({
