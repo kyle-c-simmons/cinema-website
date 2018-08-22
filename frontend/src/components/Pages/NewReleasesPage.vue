@@ -19,8 +19,9 @@
                       </router-link>
 
 
-                        <h6 style="font-size: 15px" class="display-4">{{movie.title}}</h6>
+                        <h6 style="font-size: 15px" class="display-4"><b>Title: </b>{{movie.title}}</h6>
                         <h6 style="font-size: 14px" class="bold padding-bottom-7 display-4"><b>{{movie.vote_average}}</b><small> / 10</small></h6>
+
 
                 </figure>
 
