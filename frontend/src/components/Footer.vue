@@ -71,19 +71,16 @@
             <h6 class="text-uppercase font-weight-bold">Support</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <p>
-              <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/aboutus'">About Us</router-link></a>
+              <a><router-link style="color: #fff !important"v-bind:to="'/aboutus'">About Us</router-link></a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Contact Us</a>
+              <a class="dark-grey-text">Contact Us</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Support</a>
+              <a><router-link style="color: #fff !important" v-bind:to="'/faq'">FAQ</router-link></a>
             </p>
             <p>
-              <a style="color: #fff !important" ><router-link v-bind:to="'/faq'">FAQ</router-link></a>
-            </p>
-            <p>
-              <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/termsAndcondition'">Terms and Conditions</router-link></a>
+              <a><router-link style="color: #fff !important" v-bind:to="'/termsAndcondition'">Terms and Conditions</router-link></a>
             </p>
 
 
@@ -104,9 +101,6 @@
             </p>
             <p>
               <a class="dark-grey-text" href="#!"></a>
-            </p>
-            <p>
-              <a class="dark-grey-text" href="#!">Help</a>
             </p>
 
           </div>
@@ -137,7 +131,7 @@
       <!-- Footer Links -->
 
       <!-- Copyright -->
-      <div style="color: #fff" class="footer-copyright text-center  py-3">© 2018 Copyright:
+      <div style="color: #fff !important" class="footer-copyright text-center  py-3">© 2018 Copyright:
         <a style="color: #67ff8b !important" href="https://api.themoviedb.org/3/movie/550?api_key=8813ca16ebe669fec2836395a2928dbc"> qa-cinemas.com</a>
       </div>
       <!-- Copyright -->
