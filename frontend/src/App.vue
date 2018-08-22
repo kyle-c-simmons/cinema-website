@@ -31,6 +31,7 @@
              </a>
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                <a class="dropdown-item"><router-link v-bind:to="'/classifications'">Classifications</router-link></a>
+               <a class="dropdown-item"><router-link v-bind:to="'/places-to-go'">Places To Go</router-link></a>
 
             </div>
            </li>
@@ -44,7 +45,6 @@
    <component><Footer></Footer></component>
   </div>
 </template>
-
 
 <script>
 import Header from './components/Header'
@@ -107,7 +107,6 @@ p {
 #nav-toggle-button{
     background-color: #4d4d4d;
 }
-
 
 .navbar-brand {
   margin-bottom: 22px;

@@ -80,10 +80,10 @@
               <a class="dark-grey-text" href="#!">Support</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">FAQ's</a>
+              <a style="color: #fff !important" ><router-link v-bind:to="'/faq'">FAQ</router-link></a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Terms and Conditions</a>
+              <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/termsAndcondition'">Terms and Conditions</router-link></a>
             </p>
 
 
