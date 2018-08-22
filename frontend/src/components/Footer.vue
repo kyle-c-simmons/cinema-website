@@ -83,7 +83,7 @@
               <a class="dark-grey-text" href="#!">FAQ's</a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Terms and Conditions</a>
+              <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/termsAndcondition'">Terms and Conditions</router-link></a>
             </p>
 
 
