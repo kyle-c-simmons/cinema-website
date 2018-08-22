@@ -19,6 +19,7 @@
     "popper.js": "^1.14.4",
     "startbootstrap-modern-business": "^4.1.1",
     "vue": "^2.0.1",
+    "vue-draggable-cal": "^1.0.0",
     "vue-head": "^2.0.12",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
