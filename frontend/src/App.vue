@@ -31,6 +31,7 @@
              </a>
              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                <a class="dropdown-item"><router-link v-bind:to="'/classifications'">Classifications</router-link></a>
+               <a class="dropdown-item"><router-link v-bind:to="'/places-to-go'">Places To Go</router-link></a>
 
             </div>
            </li>
