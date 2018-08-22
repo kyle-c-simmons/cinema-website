@@ -153,7 +153,7 @@ Payments received in your PayPal Account may be reversed at a later time, for ex
           </div>
           <div class="panel-body">
 
-          	<div class="card" v-for="review in getMovieReviews">
+          	<div class="card" v-for="review, index in getMovieReviews" :key="review.id" >
           	    <div class="card-body">
           	        <div class="row">
                   	    <div class="col-md-2">
@@ -167,11 +167,10 @@ Payments received in your PayPal Account may be reversed at a later time, for ex
                   	       <div class="clearfix"></div>
                   	        <p>{{ review.content }}</p>
                   	        <p>
-                  	            <a style="padding 0px;" class="float-right btn btn-outline-primary ml-2"> <i class="fa fa-reply"></i> Reply</a>
-                  	            <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
                   	       </p>
                   	    </div>
           	        </div>
+                    <br></br>
           	    </div>
 
 
@@ -202,7 +201,8 @@ Payments received in your PayPal Account may be reversed at a later time, for ex
         youtubeMovieId: '',
         getMovieInformation: '',
         getMovieReviews: '',
-        getSocialMedia: ''
+        getSocialMedia: '',
+        showReply: false
       }
     },
     methods: {
