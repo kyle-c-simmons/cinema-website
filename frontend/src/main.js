@@ -20,11 +20,11 @@ import Classifications from 'components/Pages/Classifications'
 import PlacesToGo from 'components/Pages/PlacesToGo'
 import NewReleases from './components/Pages/NewReleasesPage'
 import MovieList from './components/Pages/MovieListing'
-import MovieDetails from 'components/Pages/MovieDetails'
+import MovieDetails from './components/Pages/MovieDetails'
 
-import AboutUs from 'components/Pages/AboutUs'
-import faq from 'components/Pages/faq'
-import TermsAndCondition from 'components/Pages/Terms&Condition'
+import AboutUs from './components/Pages/AboutUs'
+import faq from './components/Pages/faq'
+import TermsAndCondition from './components/Pages/Terms&Condition'
 
 // ================ All paths =====================
 const routes = [
@@ -39,8 +39,7 @@ const routes = [
   { path: '/cinemas', component: CinemasPage },
   {path: '/newrelease', component: NewReleases },
   {path: '/movielist', component: MovieList },
-  {path: '/aboutus', component: AboutUs}
-
+  { path: '/aboutus', component: AboutUs},
   { path: '/places-to-go', component: PlacesToGo },
   { path: '/newrelease', component: NewReleases },
   { path: '/movielist', component: MovieList },
