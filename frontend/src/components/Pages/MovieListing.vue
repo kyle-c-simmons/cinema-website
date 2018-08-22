@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="jumbotron">
-      <h1 class="display-3">Upcoming movies</h1>
+      <h1 name="upcoming" class="display-3">Upcoming movies</h1>
           <div class="row">
 
         <div class="col-md-12">
@@ -14,7 +14,6 @@
                   <router-link
                     :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
                     <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
-                    <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
                       </router-link>
 
                         <h6 style="font-size: 15px" class="display-4"><b>Title:</b> {{movie.title}}</h6>
