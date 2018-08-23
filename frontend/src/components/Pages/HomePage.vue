@@ -1,6 +1,6 @@
 <template>
     <div >
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+      <div id="myCarousel" class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="3400">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -18,7 +18,7 @@
           <div class="item active" v-for="movie, index in popularMovies" :key="movie.id" v-if="index >= 0 && index < 1">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image sldier">
             <div class="carousel-caption">
-                <h1 style="font-size: 40px" class="display-4"><b>{{movie.title}}</b></h1>
+                <h5 style="font-size: 40px" class="display-4"><b>{{movie.title}}</b></h5>
             </div>
           </div>
 
@@ -43,7 +43,7 @@
       </div>
 
   <div class="jumbotron">
-    <h1 class="display-3">Most Popular Movies</h1><br><br>
+    <h2 class="display-3">Most Popular Movies</h2><br><br>
 
     <!-- Search form -->
   <div id="search-bar" class="active-cyan-3 active-cyan-4 mb-4 md-form">
@@ -65,7 +65,7 @@
                   :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
                   <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
                   <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
-<h6 style="font-size: 15px" class="display-4">{{movie.title}}</h6>
+                  <h6 style="font-size: 15px" class="display-4">{{movie.title}}</h6>
                     </router-link>
                   </div>
 
@@ -102,35 +102,40 @@
     }
   }
 </script>
-
+<!-- text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; -->
 <style>
-  .carousel-inner {
-    width: 100%;
-    height:550px;
-  }
-  .carousel-inner .item {
-    opacity: 0;
-    -webkit-transition-property: opacity;
-    -moz-transition-property: opacity;
-    -o-transition-property: opacity;
-    transition-property: opacity;
-  }
-  .carousel-inner .active {
-    opacity: 1;
-  }
-  .carousel-inner .active.left,
-  .carousel-inner .active.right {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-  }
-  .carousel-inner .next.left,
-  .carousel-inner .prev.right {
-    opacity: 1;
-  }
-  .carousel-fade .carousel-control {
-    z-index: 2;
-  }
+h5 {
+    text-shadow: 2px 2px 3px black, 0 0 30px blue, 0 0 8px darkblue;
+
+}
+
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 2;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 10;
+}
+
 
   #movies-button {
     background-color: #03396c;

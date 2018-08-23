@@ -6,8 +6,6 @@
 
         <div class="col-md-12">
 
-            <div id="mdb-lightbox-ui"></div>
-
             <div id="top-6-movies" class="mdb-lightbox no-margin">
 
                 <figure id="eachMovieHomePage" class="col-md-4" v-for="movie, index in popularMovies" :key="movie.id" v-if="index != 7"">
@@ -57,6 +55,10 @@ export default {
 </script>
 
 <style scoped>
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 .zoom {
     transition: transform .4; /* Animation */
 
@@ -65,32 +67,5 @@ export default {
 
 .zoom:hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-.carousel-inner {
-  width:40;
-  height:300px;
-}
-.carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-.carousel-inner .active {
-  opacity: 1;
-}
-.carousel-inner .active.left,
-.carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel-inner .next.left,
-.carousel-inner .prev.right {
-  opacity: 1;
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
 }
 </style>
