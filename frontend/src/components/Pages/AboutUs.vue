@@ -89,7 +89,8 @@
             </div>
             <div class="modal-body">
               <p style="color: black;">
-                I created the front-page carousel, What’s on section, Terms and condition, image effects.
+                I was mostly involved in the frontend development, I created the following:
+                 front-page carousel, "What’s on" section, Terms and condition, image effects.
                 Booking the film screens, modal terms and condition and the payment section.
               </p>
             </div>
