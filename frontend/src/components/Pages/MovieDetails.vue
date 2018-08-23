@@ -37,7 +37,7 @@
             <h1 style="font-size: 28px;" class="panel-title display-3">Book this film</h1>
           </div>
           <div class="panel-body">
-            <DraggableCal />
+            <DraggableCal @selectedDate="showScreens = true" />
             <br>
             <table class="table">
               <thead class="thead-light">
@@ -48,22 +48,46 @@
                </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">Screen 1</th>
-                  <td><button type="button" class="btn btn-primary">10:15</button></td>
-                  <td><button type="button" class="btn btn-primary">12:00</button></td>
-                  <td><button type="button" class="btn btn-primary">14:00</button></td>
-                  <td><button type="button" class="btn btn-primary">18:00</button></td>
+                <tr v-if="!showScreens" v-for="screen in screenApiData">
+                  <th scope="row">{{ screen.screenName }}</th>
+                  <td v-for="time in screen.time"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">{{ time.screenTime }} </button></td>
 
-                </tr>
-                <tr>
-                  <th scope="row">Screen 2</th>
-                  <td><button type="button" class="btn btn-primary">09:00 </button></td>
-                  <td><button type="button" class="btn btn-primary">11:15 </button></td>
-                  <td><button type="button" class="btn btn-primary">13:00 </button></td>
-                  <td><button type="button" class="btn btn-primary">17:30 </button></td>
-                  <td><button type="button" class="btn btn-primary">19:00 </button></td>
-                  <td><button type="button" class="btn btn-primary">21:05 </button></td>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                     <div class="modal-content">
+                       <div class="modal-header">
+                         <h5 class="modal-title" id="exampleModalLabel">Payment</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                           </button>
+                         </div>
+                         <div class="modal-body">
+                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                             <input type="hidden" name="cmd" value="_s-xclick">
+                       <input type="hidden" name="hosted_button_id" value="R4LHNM7VWYWCN">
+                       <table>
+                     <tr><td><input type="hidden" name="on0" value="Payment selection">Payment selection</td></tr><tr><td><select name="os0">
+                          <option value="Child">Child £0.10 GBP</option>
+                        <option value="Adult">Adult £0.20 GBP</option>
+                         </select> </td></tr>
+                       <tr><td><input type="hidden" name="on1" value="Quantity">Quantity</td></tr><tr><td><select name="os1">
+                          <option value="1">1 </option>
+                          <option value="2">2 </option>
+                          <option value="3">3 </option>
+                          <option value="4">4 </option>
+                          <option value="5">5 </option>
+                           </select> </td></tr>
+                           </table>
+                           <input type="hidden" name="currency_code" value="GBP">
+                           <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                           <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                         </form>
+                       </div>
+                       <div class="modal-footer">
+                       </div>
+                     </div>
+                    </div>
+                    </div>
                 </tr>
               </tbody>
           </table>
@@ -126,7 +150,10 @@
         getMovieInformation: '',
         getMovieReviews: '',
         getSocialMedia: '',
-        showReply: false
+        showReply: false,
+        screenApiData: '',
+        screenApiTimeData: '',
+        showScreens: false
       }
     },
     methods: {
@@ -158,6 +185,15 @@
         .then(res => {
           console.log("Social media links: " + res.data)
           this.getSocialMedia = res.data;
+        })
+        .catch(error => console.log(error));
+
+        axios.get('http://localhost:8089/Screen')
+        .then(res => {
+          console.log("Screens: " + res)
+          this.screenApiData = res.data;
+          this.screenApiTimeData = res.data
+          console.log("API DATA" + this.screenApiData + "times" + this.screenApiTimeData);
         })
         .catch(error => console.log(error));
 
