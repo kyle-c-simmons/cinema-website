@@ -1,6 +1,10 @@
 <template>
 <div>
-<img src="../../images/private-cinema.jpg" style="height:500px !important" width="100%" class="img-fluid" alt="Responsive image">
+  <ol class="breadcrumb">
+    <li><router-link v-bind:to="'/home'">Home</router-link></li>
+    <li class="active">Cinemas</li>
+  </ol>
+<img id="cinema-img" src="../../images/private-cinema.jpg" style="height:500px !important" width="100%" class="img-fluid" alt="Responsive image">
 <div class="jumbotron">
 
 <div class="container">
@@ -61,6 +65,17 @@
   }
 
 </script>
+<style scoped>
+.breadcrumb {
+  margin-top: -7px;
+  height: 50px;
+  padding-top: 20px;
+}
+
+#cinema-img {
+  margin-top: -20px;
+}
+</style>
 <style>
 .nav{ -webkit-appearance: none; padding: 10px 20px; border: 0; margin-bottom: 20px; }
 .nav{ display: flex; justify-content: space-between; align-items: center; }

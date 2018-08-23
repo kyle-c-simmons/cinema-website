@@ -26,6 +26,7 @@ import AboutUs from './components/Pages/AboutUs'
 import ContactUs from './components/Pages/ContactUs'
 import faq from './components/Pages/faq'
 import TermsAndCondition from './components/Pages/Terms&Condition'
+import Forum from './components/Pages/Forum'
 
 // ================ All paths =====================
 const routes = [
@@ -46,12 +47,16 @@ const routes = [
   { path: '/newrelease', component: NewReleases },
   { path: '/movielist', component: MovieList },
   { path: '/faq', component: faq },
-  { path: '/termsAndcondition', component: TermsAndCondition }
+  { path: '/termsAndcondition', component: TermsAndCondition },
+  { path: '/forum', component: Forum }
 ];
 
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
 
 // ===== Bootstrap components integration (JQuery needed) ======

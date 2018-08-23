@@ -13,6 +13,9 @@
              <a class="nav-link"><router-link v-bind:to="'/home'"><span class="glyphicon glyphicon-home"></span></router-link></a>
            </li>
            <li class="nav-item">
+             <a bgcolor="blue"class="nav-link"><router-link v-bind:to="'/forum'">Forum</router-link></a>
+           </li>
+           <li class="nav-item">
              <a bgcolor="blue"class="nav-link"><router-link v-bind:to="'/cinemas'">Cinemas</router-link></a>
            </li>
            <li class="nav-item dropdown">
@@ -35,12 +38,72 @@
 
             </div>
            </li>
+           <li class="nav-item">
+             <button style="margin-top: 10px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button>
+             <button style="margin-top: 10px" type="button" class="btn btn-danger" data-toggle="modal" data-target="#registerModal">Register</button>
+           </li>
 
          </ul>
        </div>
      </div>
    </nav>
    <router-view></router-view>
+   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input placeholder="Username" type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+ <div class="modal-content">
+   <div class="modal-header">
+     <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+     </button>
+   </div>
+   <div class="modal-body">
+     <form>
+       <div class="form-group">
+         <input placeholder="Enter Username" type="text" class="form-control" id="recipient-name">
+       </div>
+       <div class="form-group">
+         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+       </div>
+       <div class="form-group">
+         <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required="">
+       </div>
+     </form>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     <button type="button" class="btn btn-primary">Register</button>
+   </div>
+ </div>
+</div>
+</div>
 
    <component><Footer></Footer></component>
   </div>
