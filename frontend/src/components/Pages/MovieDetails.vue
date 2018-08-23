@@ -120,7 +120,7 @@ Payments received in your PayPal Account may be reversed at a later time, for ex
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="67GCSSSCVJMFY">
 <table>
-<tr><td><input type="hidden" name="on0" value="QA Cinema">QA Cinema</td></tr><tr><td><select name="os0">
+<tr><td><input type ="hidden" name="on0" value="QA Cinema">QA Cinema</td></tr><tr><td><select name="os0">
 	<option value="Adult">Adult £5.00 GBP</option>
 	<option value="Child">Child £2.00 GBP</option>
 </select> </td></tr>
