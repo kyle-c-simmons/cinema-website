@@ -8,7 +8,7 @@
   <div class="card">
     <img class="card-img-top" src="../../../src/images/pizza-express.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Pizza Express</h5>
+      <h4 class="card-title">Pizza Express</h4>
       <p class="card-text">Crispy pizzas, crunchy salads, dough balls, delicious wines and beers and mouthwatering desserts. The menu includes healthy eating and gluten-free options too. The ideal place for a lunch or dinner.</p>
     </div>
     <div class="card-footer">
@@ -38,7 +38,7 @@
   <div class="card">
     <img class="card-img-top" src="../../../src/images/Dockyard.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">The Dockyards</h5>
+      <h4 class="card-title">The Dockyards</h4>
       <p class="card-text">The Dockyard is a rustic ale house with a relaxed dining operation that offers a simple, quick and tasty breakfast, lunch and dinner menus.</p>
     </div>
     <div class="card-footer">
@@ -70,7 +70,7 @@
   <div class="card">
     <img class="card-img-top" src="../../../src/images/prezzo.jpg" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Prezzo</h5>
+      <h4 class="card-title">Prezzo</h4>
       <p class="card-text">Casual Italian chain restaurant for stone-baked pizzas and classic pastas, plus separate kids' menu.</p>
     </div>
     <div class="card-footer">

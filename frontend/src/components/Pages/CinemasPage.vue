@@ -20,15 +20,15 @@
       </ul>
 
       <h2>Getting Here</h2>
-        <h3>Salford Location:</h3>
-        <h5>QA Cinema, The Quays, Salford M50 3AH</h5>
+        <h2>Salford Location:</h2>
+        <h3>QA Cinema, The Quays, Salford M50 3AH</h3>
         <h3>Public transport Public transport</h3>
-        <h4>By Train</h4>
-        <h5>Salford Railway station is 0.2 miles away from the cinema.</h5>
-        <h4>By Tram</h4>
-        <h5>Metro-Link is within 0.1 miles away from the cinema.</h5>
-        <h4>By Bus</h4>
-        <h5>Bus stop right outside the cinema. Variety of buses as this is the main stop.</h5>
+        <h3>By Train</h3>
+        <h4>Salford Railway station is 0.2 miles away from the cinema.</h4>
+        <h3>By Tram</h3>
+        <h4>Metro-Link is within 0.1 miles away from the cinema.</h4>
+        <h3>By Bus</h3>
+        <h4>Bus stop right outside the cinema. Variety of buses as this is the main stop.</h4>
 
       <h3>Google Maps</h3>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.6829865335117!2d-2.292395484156737!3d53.47412548000601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae14c88a552b%3A0xe02cfe2c69d3b568!2sThe+Quays%2C+Salford!5e0!3m2!1sen!2suk!4v1534362081707"
@@ -37,11 +37,11 @@
       <h2>Facilities</h2>
 
       <h3>Screens</h3>
-      <h5>2D and 3D</h5>
-      <h5>Disabled Parking</h5>
+      <h4>2D and 3D</h4>
+      <h4>Disabled Parking</h4>
       <h3>Accessibility</h3>
-      <h5>Disabled access - We offer a step free access</h5>
-      <h5>Disabled Parking is available</h5>
+      <h4>Disabled access - We offer a step free access</h4>
+      <h4>Disabled Parking is available</h4>
 
 </div>
 
