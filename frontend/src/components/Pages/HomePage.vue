@@ -25,7 +25,7 @@
           <div class="item" v-for="movie, index in popularMovies" :key="movie.id" v-if="index > 0 && index < 7">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image slider">
             <div class="carousel-caption">
-                  <h1 style="font-size: 40px" class="display-4"><b>{{movie.title}}</b></h1>
+                  <h5 style="font-size: 40px" class="display-4"><b>{{movie.title}}</b></h5>
             </div>
           </div>
 
