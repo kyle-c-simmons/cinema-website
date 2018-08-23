@@ -14,183 +14,194 @@
 
         <!-- <div class="row"> -->
 
-          <div class="row slideanim">
+        <div class="card-group">
+          <!-- Kyle's Section -->
+  <div class="card">
+    <img class="card-img-top" src="../../../src/images/kyle.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Kyle Simmons</h5>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Find out more</button>
 
-                                                      <!-- Kyle's Section -->
-            <div class="card" style="width: 20rem;">
-            <div class="col-sm-4">
-              <img class="card-img-top" style="border-radius:100px;" src="../../../src/images/kyle.jpg" alt="Kyle Simmons">
-              <h4 class="card-title">Kyle Simmons</h4>
-              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find out more</button>
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
 
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <!-- <h4 style="float: left !important;" class="modal-title">Modal Header</h4> -->
-                    </div>
-                    <div class="modal-body">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <!-- <h4 style="float: left !important;" class="modal-title">Modal Header</h4> -->
             </div>
+            <div class="modal-body">
+              <p style="color: black;">As a scrum master, I was in charge of setting up meetings and organising the project. I was involved in creating the following: navigation, footer, logo, API movies and displaying movies, search and booking system, a forum for discussion and auto generated pages with movie trailers along with movie information, social media links and reviews.</p>
             </div>
-
-                                                  <!-- Jevale's Section -->
-
-            <div class="col-sm-4">
-              <img src="../../../src/images/jevale.png" alt="Jevale Sterling" width="300" height="300">
-              <h4>Jevale Sterling</h4>
-              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find out more</button>
-
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <!-- <h4 class="modal-title">Modal Header</h4> -->
-                    </div>
-                    <div class="modal-body">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
+          </div>
 
-                                                    <!-- Aisha's Section -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jevale's Section -->
+  <div class="card">
+    <img class="card-img-top" src="../../../src/images/jevale.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Jevale Sterling</h5>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Find out more</button>
 
-            <div class="col-sm-4">
-              <img src="../../../src/images/aisha.png" alt="Aisha" width="300" height="300">
-              <h4>Aisha</h4>
-              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find out more</button>
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
 
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <!-- <h4 class="modal-title">Modal Header</h4> -->
-                    </div>
-                    <div class="modal-body">
-                      <img src="../../../src/images/18-age-rating.png" alt="Aisha" width="200" height="200">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <!-- <h4 class="modal-title">Modal Header</h4> -->
             </div>
+            <div class="modal-body">
+              <p style="color: black;">
+                I was involved in the backend of the system this involved creating the (movie, introduction and general message board),
+                created the login and signup using spring security and the movie screens.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Aisha's Section -->
+  <div class="card">
+    <img class="card-img-top" src="../../../src/images/aisha.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Aisha Amate</h5>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Find out more</button>
 
-          </div> <!-- end of 1st row -->
+      <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <!-- <h4 class="modal-title">Modal Header</h4> -->
+            </div>
+            <div class="modal-body">
+              <p style="color: black;">
+                I created the front-page carousel, What’s on section, Terms and condition, image effects.
+                Booking the film screens, modal terms and condition and the payment section.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Section -->
+
+    <div class="card-group">
+      <!-- Mehul's Section -->
+<div class="card">
+<img class="card-img-top" src="../../../src/images/mehul.jpeg" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Mehul Mepani</h5>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4">Find out more</button>
+
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <h4 class="modal-title">Modal Header</h4> -->
+        </div>
+        <div class="modal-body">
+          <p style="color: black;">
+            I created the cinema page which has all the essential information about the cinema, this includes the opening times,
+            how to get to the cinema and the facilities of the cinema. There is a helpful map which shows you how to get to QA Cinema.
+            I created the places to go page to show local restaurants and bars near the cinema and worked on answering some of the essential question.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- Andrew's Section -->
+<div class="card">
+<img class="card-img-top" src="../../../src/images/andrew.png" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Andrew Freitas</h5>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">Find out more</button>
+
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <h4 class="modal-title">Modal Header</h4> -->
+        </div>
+        <div class="modal-body">
+          <p style="color: black;">
+            Having joined the team project at a later stage, I was able to create the about us page which shows the team involved in the project and what everyone done.
+            I also helped create the contact us page to listen to any questions or feedback you have to give us.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- Fozia's Section -->
+<div class="card">
+<img class="card-img-top" src="../../../src/images/fozia.jpeg" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Fozia Khan</h5>
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6">Find out more</button>
+
+  <div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <h4 class="modal-title">Modal Header</h4> -->
+        </div>
+        <div class="modal-body">
+          <p style="color: black;">
+            Having joined the team project at a later stage, I created the contact page for QACinemas to get feedback and listen to any questions customers have,
+             and helped Andrew with the About Us page. I helped my team members with help on any aspects when needed.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
 
           <br><br>
 
-          <div class="row slideanim">
 
-                                                    <!-- Mehul's Section -->
-
-            <div class="col-sm-4">
-              <img src="../../../src/images/mehul.jpeg" alt="Mehul" width="300" height="300">
-              <h4>Mehul + Certified Tester</h4>
-              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find out more</button>
-
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <!-- <h4 class="modal-title">Modal Header</h4> -->
-                    </div>
-                    <div class="modal-body">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-                                                    <!-- Andrew's Section -->
-
-            <div class="col-sm-4">
-              <img src="../../../src/images/andrew.png" alt="Andrew Freitas" width="300" height="300">
-              <h4>Andrew Freitas</h4>
-              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find out more</button>
-
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <!-- <h4 class="modal-title">Modal Header</h4> -->
-                    </div>
-                    <div class="modal-body">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-                                                    <!-- Fozia's Section -->
-
-            <div class="col-sm-4">
-              <img src="../../../src/images/fozia.jpeg" alt="Fozia Khan" width="300" height="300">
-              <h4>Fozia Khan</h4>
-              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find out more</button>
-
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <!-- <h4 class="modal-title">Modal Header</h4> -->
-                    </div>
-                    <div class="modal-body">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-          </div> <!-- end of second row -->
 
         <!-- </div>​ -->                             <!-- class="row" endtag -->
         </div>
@@ -231,7 +242,7 @@
 } */
 
 .card-img-top {
-  width: 120px !important;
-  height: 120px !important;
+  width: 320px !important;
+  height: 320px !important;
 }
 </style>
