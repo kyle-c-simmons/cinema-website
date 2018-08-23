@@ -18,14 +18,14 @@
           <div class="item active" v-for="movie, index in popularMovies" :key="movie.id" v-if="index >= 0 && index < 1">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image sldier">
             <div class="carousel-caption">
-                <h1 style="font-size: 40px" class="display-4">{{movie.title}}</h1>
+                <h1 style="font-size: 40px" class="display-4"><b>{{movie.title}}</b></h1>
             </div>
           </div>
 
           <div class="item" v-for="movie, index in popularMovies" :key="movie.id" v-if="index > 0 && index < 7">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image slider">
             <div class="carousel-caption">
-                  <h1 style="font-size: 40px" class="display-4">{{movie.title}}</h1>
+                  <h1 style="font-size: 40px" class="display-4"><b>{{movie.title}}</b></h1>
             </div>
           </div>
 
