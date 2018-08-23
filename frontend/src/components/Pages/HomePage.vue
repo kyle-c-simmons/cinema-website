@@ -17,12 +17,16 @@
         <div id="home-sldier" class="carousel-inner">
           <div class="item active" v-for="movie, index in popularMovies" :key="movie.id" v-if="index >= 0 && index < 1">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image sldier">
-            <h3>Los Angeles</h3>
-        <p>LA is always so much fun!</p>
+            <div class="carousel-caption">
+                <h1 style="font-size: 40px" class="display-4">{{movie.title}}</h1>
+            </div>
           </div>
 
           <div class="item" v-for="movie, index in popularMovies" :key="movie.id" v-if="index > 0 && index < 7">
             <img v-bind:src="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" alt="Image slider">
+            <div class="carousel-caption">
+                  <h1 style="font-size: 40px" class="display-4">{{movie.title}}</h1>
+            </div>
           </div>
 
         </div>
@@ -61,13 +65,10 @@
                   :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
                   <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
                   <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
-
+<h6 style="font-size: 15px" class="display-4">{{movie.title}}</h6>
                     </router-link>
                   </div>
 
-
-                      <h6 style="font-size: 15px" class="display-4">{{movie.title}}</h6>
-                      <h6 style="font-size: 14px" class="bold padding-bottom-7 display-4"><b>{{movie.vote_average}}</b><small> / 10</small></h6>
 
               </figure>
 
@@ -191,4 +192,5 @@ img:hover + #book-movies-btn, #book-movies-btn:hover {
 .zoom:hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
 </style>
