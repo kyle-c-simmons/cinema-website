@@ -29,15 +29,30 @@
                         <th>Messages</th><br></br>
                       </tr>
                     </thead>
+                    <div class="row">
+                  <div class="col-sm-4 col-md-12">
+                          <div class="panel panel-default">
+                              <div class="panel-body">
+                                  <form  accept-charset="UTF-8">
+                                      <textarea type="text" v-model="generalMessage" class="form-control counted"
+                                      name="generalMessages" placeholder="Type in your message"
+                                      rows="5" style="margin-bottom:10px;"></textarea>
+                                      <button @click="postGeneralMessage" class="btn btn-info" type="submit">Post New Message</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                     <tbody>
                       <tr>
+
                         <td>
-                          <div class="panel panel-default">
+                          <div v-for="message in generalMessagesAPI" class="panel panel-default">
                             <div class="panel-heading">
-                              <h3 class="panel-title">Username and date</h3>
+                              <h3 class="panel-title"> {{ message.creationDate }}</h3>
                             </div>
                             <div class="panel-body" >
-                              description
+                              {{ message.text }}
                             </div>
                           </div>
                         </td>
@@ -159,29 +174,38 @@
 }
 </style>
 
-export default{
+<script>
+import axios from 'axios';
 
-  name: 'main-forum',
+export default{
   data() {
     return {
       messages: '',
-      thread_: false
+      thread_: false,
+      generalMessagesAPI: '',
+      generalMessage: '',
+      isSubmitted: false
     }
   },
-  created: function () {
-    this.getMessages();
-  },
   methods: {
-        getMessages () {
+    postGeneralMessage() {
 
-        }
 
+    }
+  },
+  created() {
+    axios.get('http://localhost:8089/generalmessages')
+    .then(res => {
+      console.log("General messages: " + res.data)
+      this.generalMessagesAPI = res.data;
+    })
+    .catch(error => console.log(error));
+    var name = this.generalMessage = generalMessages.value;
+    axios.post('http://localhost:8089/generalmessages', { text: 'name' })
+      .then(function(response){
+        console.log('saved successfully')
+      });
   }
 }
-
-
-</script>
-<script type="text/javascript">
-
 
 </script>

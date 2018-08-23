@@ -37,7 +37,7 @@
             <h1 style="font-size: 28px;" class="panel-title display-3">Book this film</h1>
           </div>
           <div class="panel-body">
-            <DraggableCal @selectedDate="showScreens = true" />
+            <DraggableCal />
             <br>
             <table class="table">
               <thead class="thead-light">
@@ -48,7 +48,7 @@
                </tr>
               </thead>
               <tbody>
-                <tr v-if="!showScreens" v-for="screen in screenApiData">
+                <tr v-for="screen in screenApiData">
                   <th scope="row">{{ screen.screenName }}</th>
                   <td v-for="time in screen.time"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">{{ time.screenTime }} </button></td>
 
@@ -152,8 +152,7 @@
         getSocialMedia: '',
         showReply: false,
         screenApiData: '',
-        screenApiTimeData: '',
-        showScreens: false
+        screenApiTimeData: ''
       }
     },
     methods: {
