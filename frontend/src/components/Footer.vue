@@ -74,7 +74,7 @@
               <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/aboutus'">About Us</router-link></a>
             </p>
             <p>
-              <a class="dark-grey-text" href="#!">Contact Us</a>
+              <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/contact-us'">Contact Us</router-link></a>
             </p>
             <p>
               <a class="dark-grey-text" href="#!">Support</a>
