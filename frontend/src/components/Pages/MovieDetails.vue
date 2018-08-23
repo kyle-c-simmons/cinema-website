@@ -25,8 +25,8 @@
               <a :href="'https://www.facebook.com/' + getSocialMedia.facebook_id" target="_blank" class="fa fa-facebook"></a>
               <a :href="'https://www.twitter.com/' + getSocialMedia.twitter_id" target="_blank" class="fa fa-twitter"></a>
               <a :href="'https://www.instagram.com/' + getSocialMedia.instagram_id" target="_blank" class="fa fa-instagram"></a>
-            </div>
-
+            </div><br></br><br><br>
+            <h6 style="float: left; font-size: 22px" class="display-4"><b>Runtime:</b> {{getMovieInformation.runtime}}</h6>
 
 
           </div>
@@ -50,10 +50,22 @@
               <tbody>
                 <tr>
                   <th scope="row">Screen 1</th>
-                  <td><button type="button" class="btn btn-primary">14:30</button></td>
+                  <td><button type="button" class="btn btn-primary">10:15</button></td>
+                  <td><button type="button" class="btn btn-primary">12:00</button></td>
+                  <td><button type="button" class="btn btn-primary">14:00</button></td>
+                  <td><button type="button" class="btn btn-primary">18:00</button></td>
+
                 </tr>
                 <tr>
-                  <th scope="row">Screen2</th>
+                  <th scope="row">Screen 2</th>
+                  <td><button type="button" class="btn btn-primary">09:00 </button></td>
+                  <td><button type="button" class="btn btn-primary">11:15 </button></td>
+                  <td><button type="button" class="btn btn-primary">13:00 </button></td>
+                  <td><button type="button" class="btn btn-primary">17:30 </button></td>
+                  <td><button type="button" class="btn btn-primary">19:00 </button></td>
+                  <td><button type="button" class="btn btn-primary">21:05 </button></td>
+                  <td><button type="button" class="btn btn-primary">23:10 </button></td>
+                  </tr>
 
 
                       <!-- Modal button
@@ -140,6 +152,7 @@ Payments received in your PayPal Account may be reversed at a later time, for ex
 
                                 <!-- END OF MODAL BUTTON -->
 
+
                 </tr>
               </tbody>
           </table>
@@ -166,11 +179,11 @@ Payments received in your PayPal Account may be reversed at a later time, for ex
                   	       </p>
                   	       <div class="clearfix"></div>
                   	        <p>{{ review.content }}</p>
-                  	        <p>
-                  	       </p>
+
                   	    </div>
           	        </div>
                     <br></br>
+
           	    </div>
 
 
