@@ -74,7 +74,7 @@
               <a><router-link style="color: #fff !important"v-bind:to="'/aboutus'">About Us</router-link></a>
             </p>
             <p>
-              <a class="dark-grey-text">Contact Us</a>
+              <a class="dark-grey-text" href="#!"><router-link v-bind:to="'/contact-us'">Contact Us</router-link></a>
             </p>
             <p>
               <a><router-link style="color: #fff !important" v-bind:to="'/faq'">FAQ</router-link></a>

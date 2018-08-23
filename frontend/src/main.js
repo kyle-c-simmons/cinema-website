@@ -23,6 +23,7 @@ import MovieList from './components/Pages/MovieListing'
 import MovieDetails from './components/Pages/MovieDetails'
 
 import AboutUs from './components/Pages/AboutUs'
+import ContactUs from './components/Pages/ContactUs'
 import faq from './components/Pages/faq'
 import TermsAndCondition from './components/Pages/Terms&Condition'
 import Forum from './components/Pages/Forum'
@@ -38,9 +39,10 @@ const routes = [
     {path: ':id', component: MovieDetails, name: 'movieDetailsId'}
   ] },
   { path: '/cinemas', component: CinemasPage },
-  {path: '/newrelease', component: NewReleases },
-  {path: '/movielist', component: MovieList },
+  { path: '/newrelease', component: NewReleases },
+  { path: '/movielist', component: MovieList },
   { path: '/aboutus', component: AboutUs},
+  { path: '/contact-us', component: ContactUs},
   { path: '/places-to-go', component: PlacesToGo },
   { path: '/newrelease', component: NewReleases },
   { path: '/movielist', component: MovieList },
