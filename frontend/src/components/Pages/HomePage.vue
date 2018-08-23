@@ -40,6 +40,13 @@
 
   <div class="jumbotron">
     <h1 class="display-3">Most Popular Movies</h1><br><br>
+
+    <!-- Search form -->
+  <div id="search-bar" class="active-cyan-3 active-cyan-4 mb-4 md-form">
+    <input v-model="searchValue" @click="displayOneAccount = true,
+  searchFirstname = true, getAccountById(searchValue)" class="form-control" type="text"
+           placeholder="Search Movie" aria-label="Search">
+         </div>
         <div class="row">
 
       <div class="col-md-12">
