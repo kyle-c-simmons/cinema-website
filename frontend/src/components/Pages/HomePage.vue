@@ -103,7 +103,7 @@
   }
 </script>
 <!-- text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; -->
-<style scope>
+<style scoped>
 h5 {
     text-shadow: 2px 2px 3px black, 0 0 30px blue, 0 0 8px darkblue;
 
