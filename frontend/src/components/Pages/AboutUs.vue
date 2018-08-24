@@ -233,7 +233,7 @@
 
 <script></script>
 
-<style lang="scss">
+<style scoped>
 .text-center {
   color: #000000 !important;
 }
@@ -245,5 +245,9 @@
 .card-img-top {
   width: 320px !important;
   height: 320px !important;
+}
+
+p {
+  text-align: center !important;
 }
 </style>
