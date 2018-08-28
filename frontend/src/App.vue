@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container text-center">
-    <nav class="sticky navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top full-width">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top full-width">
      <div  id="container-nav" class="container-fluid">
        <a class="navbar-brand"><router-link v-bind:to="'/home'"><img src="../src/images/logo.jpg"><span>Cinemas</span></router-link></a>
        <button  id="nav-toggle-button" class="navbar-toggle navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -120,20 +120,6 @@ export default {
   components: { Footer}
 }
 
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("app");
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
 </script>
 
 <style lang="scss">
@@ -180,16 +166,6 @@ p {
 
   }
 }
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-/* .sticky, .container, text-center {
-  padding-top: 102px;
-} */
 
 #nav-toggle-button{
     background-color: #4d4d4d;
