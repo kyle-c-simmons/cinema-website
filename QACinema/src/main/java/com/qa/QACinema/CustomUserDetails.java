@@ -11,13 +11,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.qa.QACinema.Entities.Role;
 import com.qa.QACinema.Entities.User;
 
-public class CustomerUserDetails implements UserDetails {
+public class CustomUserDetails implements UserDetails {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static String SecurityContextHolder;
 	private String username;
 	private String password;
 	private Collection<? extends GrantedAuthority> authorities;
 
-	public CustomerUserDetails(User findByUsername) {
+	public CustomUserDetails(User findByUsername) {
 		this.username= findByUsername.getUsername();
 		this.password = findByUsername.getPassword();
 		
@@ -64,5 +69,27 @@ public class CustomerUserDetails implements UserDetails {
 		// TODO Auto-generated method stub
 		return true;
 	}
+
+	public static String getSecuritycontextholder() {
+		return SecurityContextHolder;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
+		this.authorities = authorities;
+	}
+
+
+	public  void setSecurityContextHolder(String securityContextHolder) {
+		SecurityContextHolder = securityContextHolder;
+	}
+	
 
 }

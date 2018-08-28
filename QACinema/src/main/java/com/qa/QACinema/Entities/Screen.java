@@ -1,7 +1,8 @@
 package com.qa.QACinema.Entities;
 
 import org.bson.types.ObjectId;
-
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -23,10 +25,15 @@ public class Screen {
     
     private String screenName;
     
-    @Column
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+   
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Time> time;
     private boolean screenBooked;
+    
+
+    @ManyToOne
+    private User creator;
     
     Screen(){}
     
@@ -69,6 +76,14 @@ public class Screen {
 
 	public void setScreenBooked(boolean screenBooked) {
 		this.screenBooked = screenBooked;
+	}
+
+	public User getCreator() {
+		return creator;
+	}
+
+	public void setCreator(User creator) {
+		this.creator = creator;
 	}
 
 	

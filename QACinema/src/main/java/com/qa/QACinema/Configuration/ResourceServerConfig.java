@@ -12,9 +12,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		// TODO Auto-generated method stub
-		http.authorizeRequests().antMatchers("/").permitAll()
-		.antMatchers("/private/**")
-		.authenticated();
+		http.authorizeRequests().antMatchers("/","/register","/login").permitAll()
+		.antMatchers("/private/**").authenticated()
+		.antMatchers("/Screen").authenticated();
+		
 	}
 	
 
