@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,11 +24,12 @@ public class GeneralMessage {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 	
-	@Temporal(TemporalType.TIME.DATE)
+	@Temporal(TemporalType.TIME)
 	private java.util.Date creationDate;
 	private String text;
 	
-	
+    
+
 	public GeneralMessage() {
 		
 	}

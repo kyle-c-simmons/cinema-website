@@ -3,6 +3,7 @@ package com.qa.QACinema.Entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -17,6 +18,10 @@ public class Time {
 	private Long screenID;
 	
 	private String screenTime;
+	
+	 @ManyToOne
+	 private User creator;
+	    
 	
 	Time(){
 		

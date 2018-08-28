@@ -30,12 +30,15 @@ public class QACinemaApp
 		builder.userDetailsService(new UserDetailsService() {
 			public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 				// TODO Auto-generated method stub
-				return new CustomerUserDetails( repo.findByUsername(username));
+				return new CustomUserDetails( repo.findByUsername(username));
 			}
 		});
 			
 			}
 		
+	private UserDetailsService userDetailsService(final UserRepository repository) {
+		return username -> new CustomUserDetails(repository.findByUsername(username));
+	}
 	
 	
 }
