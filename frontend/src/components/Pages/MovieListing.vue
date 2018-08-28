@@ -17,9 +17,12 @@
                     <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
                       </router-link>
                     </div>
+
                         <h6 style="font-size: 15px" class="display-4"><b>Title:</b> {{movie.title}}</h6>
                         <h6 style="font-size: 14px" class="bold padding-bottom-7 display-4"><b>Release date:</b> {{movie.release_date}}<small></small></h6>
-
+                      <figure id="eachMovieHomePage" class="col-lg-3" v-for="movie, index in displayMovie" :key="movie.id">
+                          <h6 style="font-size: 15px" class="display-4"><b>Title:</b> {{movie.cast_id}}</h6>
+                      </figure>
                 </figure>
 
               </div>
@@ -93,7 +96,9 @@ export default {
     return {
       popularMovies: [''],
       kidsMovies: [''],
-      mostVoted: ['']
+      mostVoted: [''],
+      movieID: [''],
+      displayMovie: [''],
     }
   },
   created() {
@@ -102,6 +107,18 @@ export default {
       console.log(res)
       this.popularMovies = res.data.results;
       console.log(this.popularMovies)
+    })
+    axios.get('https://api.themoviedb.org/3/discover/movie?api_key=8813ca16ebe669fec2836395a2928dbc&language=en-GB&sort_by=popularity.desc')
+    .then(res => {
+      console.log(res)
+      this.movieID = res.data.results.id;
+      console.log(this.movieID)
+    })
+    axios.get('https://api.themoviedb.org/3/movie/' +299536+ '/credits?api_key=8813ca16ebe669fec2836395a2928dbc')
+    .then(res => {
+      console.log(res)
+      this.displayMovie = res.data.cast.name;
+      console.log(this.displayMovie)
     })
     .catch(error => console.log(error));
     axios.get('https://api.themoviedb.org/3/movie/upcoming?api_key=8813ca16ebe669fec2836395a2928dbc&language=en-GB&region=US')
