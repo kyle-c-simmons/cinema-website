@@ -1,7 +1,9 @@
 <template>
-  <div>
+<div>
   <ol class="breadcrumb">
-    <li><router-link v-bind:to="'/home'">Home</router-link></li>
+    <li>
+      <router-link v-bind:to="'/home'">Home</router-link>
+    </li>
     <li class="active">Forum</li>
   </ol>
   <div class="jumbotron">
@@ -9,7 +11,7 @@
 
 
     <div class="container">
-        <div class="panel-group" id="accordion">
+      <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
@@ -30,19 +32,17 @@
                       </tr>
                     </thead>
                     <div class="row">
-                  <div class="col-sm-4 col-md-12">
-                          <div class="panel panel-default">
-                              <div class="panel-body">
-                                  <form  accept-charset="UTF-8">
-                                      <textarea type="text" v-model="generalMessage" class="form-control counted"
-                                      name="generalMessages" placeholder="Type in your message"
-                                      rows="5" style="margin-bottom:10px;"></textarea>
-                                      <button @click="postGeneralMessage" class="btn btn-info" type="submit">Post New Message</button>
-                                  </form>
-                              </div>
+                      <div class="col-sm-4 col-md-12">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            <form accept-charset="UTF-8">
+                              <textarea type="text" v-model="generalMessage" class="form-control counted" name="generalMessages" placeholder="Type in your message" rows="5" style="margin-bottom:10px;"></textarea>
+                              <button @click="postGeneralMessage" class="btn btn-info" type="submit">Post New Message</button>
+                            </form>
                           </div>
+                        </div>
                       </div>
-                  </div>
+                    </div>
                     <tbody>
                       <tr>
 
@@ -51,7 +51,7 @@
                             <div class="panel-heading">
                               <h3 class="panel-title"> {{ message.creationDate }}</h3>
                             </div>
-                            <div class="panel-body" >
+                            <div class="panel-body">
                               {{ message.text }}
                             </div>
                           </div>
@@ -92,7 +92,7 @@
                             <div class="panel-heading">
                               <h3 class="panel-title">Username and date</h3>
                             </div>
-                            <div class="panel-body" >
+                            <div class="panel-body">
                               description
                             </div>
                           </div>
@@ -134,7 +134,7 @@
                             <div class="panel-heading">
                               <h3 class="panel-title">Username and date</h3>
                             </div>
-                            <div class="panel-body" >
+                            <div class="panel-body">
                               description
                             </div>
                           </div>
@@ -156,11 +156,11 @@
 
 
 
-    <div >
+    <div>
 
     </div>
   </div>
-  </div>
+</div>
 </template>
 <style scoped>
 .breadcrumb {
@@ -177,7 +177,7 @@
 <script>
 import axios from 'axios';
 
-export default{
+export default {
   data() {
     return {
       messages: '',
@@ -195,17 +195,18 @@ export default{
   },
   created() {
     axios.get('http://localhost:8089/generalmessages')
-    .then(res => {
-      console.log("General messages: " + res.data)
-      this.generalMessagesAPI = res.data;
-    })
-    .catch(error => console.log(error));
+      .then(res => {
+        console.log("General messages: " + res.data)
+        this.generalMessagesAPI = res.data;
+      })
+      .catch(error => console.log(error));
     var name = this.generalMessage = generalMessages.value;
-    axios.post('http://localhost:8089/generalmessages', { text: 'name' })
-      .then(function(response){
+    axios.post('http://localhost:8089/generalmessages', {
+        text: 'name'
+      })
+      .then(function(response) {
         console.log('saved successfully')
       });
   }
 }
-
 </script>

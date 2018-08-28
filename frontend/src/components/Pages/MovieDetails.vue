@@ -27,8 +27,6 @@
               <a :href="'https://www.instagram.com/' + getSocialMedia.instagram_id" target="_blank" class="fa fa-instagram"></a>
             </div><br></br><br><br>
             <h6 style="float: left; font-size: 22px" class="display-4"><b>Runtime:</b> {{getMovieInformation.runtime}}</h6>
-
-
           </div>
         </div>
 
@@ -63,18 +61,18 @@
                          </div>
                          <div class="modal-body">
                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-  <input type="hidden" name="cmd" value="_s-xclick">
-  <input type="hidden" name="hosted_button_id" value="5M6W6UDDSXT4Q">
-  <table>
-  <tr><td><input type="hidden" name="on0" value="QA Cinema">QA Cinema</td></tr><tr><td><select name="os0">
-  	<option value="Adult">Adult £5.00 GBP</option>
-  	<option value="Child">Child £2.00 GBP</option>
-  </select> </td></tr>
-  </table>
-  <input type="hidden" name="currency_code" value="GBP">
-  <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-  </form>
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="5M6W6UDDSXT4Q">
+                            <table>
+                            <tr><td><input type="hidden" name="on0" value="QA Cinema">QA Cinema</td></tr><tr><td><select name="os0">
+                            	<option value="Adult">Adult £5.00 GBP</option>
+                            	<option value="Child">Child £2.00 GBP</option>
+                            </select> </td></tr>
+                            </table>
+                            <input type="hidden" name="currency_code" value="GBP">
+                            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                          </form>
 
                        </div>
                        <div class="modal-footer">

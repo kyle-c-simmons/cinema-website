@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 const state = {
   count: 0,
-  appTitle: 'frontend',
-  appVersion: '0.0.1'
+  appTitle: 'QA-Cinemas',
+  appVersion: '1.0.0'
 }
 
 const mutations = {

@@ -73,6 +73,8 @@
   width: 120px !important;
   height: 120px !important;
 }
+
+
 </style>
 
 <script>
