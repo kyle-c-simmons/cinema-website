@@ -45,7 +45,6 @@
                     <router-link
                       :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
                       <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
-                      <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
                         </router-link>
                       </div>
                         <h6 style="font-size: 15px" class="display-4"><b>Title:</b> {{movie.title}}</h6>
@@ -71,7 +70,6 @@
                   <router-link
                     :to="{name: 'movieDetails', name: 'movieDetailsId', params: { id: movie.id }}">
                     <img class="img-fluid img-thumbnail" alt="picture" v-bind:src="'http://image.tmdb.org/t/p/w342' + movie.poster_path">
-                    <button id="book-movies-btn" type="button" class="btn btn-primary center-block btn-lg">Book</button>
                       </router-link>
                       </div>
                       <h6 style="font-size: 15px" class="display-4"><b>Title:</b> {{movie.title}}</h6>
